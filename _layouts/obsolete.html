@@ -1,0 +1,100 @@
+---
+layout: head-body
+---
+
+{% if page.Image %}
+	<img src="/assets/{{page.Image}}" alt="{{page.Image}}" width="100">
+{% endif %}
+
+
+{% if page.Full_name %}
+<p>Full Name: {{page.Full_name}}</p>
+{% endif %}
+
+
+{% if page.vguID %}
+<p>ID: {{page.vguID}}</p>
+{% endif %}
+
+{% if page.vguID %}
+<p>Email at: {{page.vguID}}(at)vgu.edu.vn</p>
+{% endif %}
+
+{% if page.Major %}
+<p>Major: {{page.Major}}</p>
+{% endif %}
+
+{% if page.DoB %}
+<p>Date of birth: {{page.DoB}}</p>
+{% endif %}
+
+
+{% if page.Hobbies %}
+<p>Hobby: {{page.Hobbies}}</p>
+{% endif %}
+
+
+{% if page.vguID %}
+<p>Short biography description: {{page.Short_bio}}</p>
+{% endif %}
+
+
+{% if page.Favorite_quote %}
+<p>Favorite quote:<br>{{page.Favorite_quote}}</p>
+{% endif %}
+
+
+{% if page.Author %}
+<p>--{{page.Author}} --</p>
+{% endif %}
+
+
+{% if page.Employability_skills %}
+<p>Employability Skills:</p>
+
+{% assign eachSkill = page.Employability_skills | split: ',' %}
+	{% for Skill in eachSkill %}
+		{% assign name = Skill | split: ' ' %}
+		{{ name | slice: 0 }}
+		{% assign number = name | slice: 1 %}
+		<div class="container">
+			<div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated" style="width:{{number}}0%;"></div>
+			</div>
+		</div>
+		<br>
+	{% endfor %}
+	
+{% endif %}
+
+
+{% if page.Experience %}
+<p>Work experience: {{page.Experience}}</p>
+{% endif %}
+
+{% if page.Languages %}
+<p>Languages: </p>
+	{% assign eachLanguage = page.Languages | split: ',' %}
+	{% for Language in eachLanguage %}
+		{% assign name = Language | split: ' ' %}
+		{{ name | slice: 0 }}
+		{% assign number = name | slice: 1 %}
+		<div class="container">
+			<div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated" style="width:{{number}}0%;"></div>
+			</div>
+		</div>
+		<br>
+	{% endfor %}
+
+{% endif %}
+
+
+{% if page.Background %}
+<p>Background: {{page.Background}}</p>
+{% endif %}
+
+
+{% if page.Achievement %}
+<p>Achievement: {{page.Achievement}}</p>
+{% endif %}

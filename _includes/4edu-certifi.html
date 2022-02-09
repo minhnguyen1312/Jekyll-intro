@@ -1,0 +1,14 @@
+<!--This includes Education and Certification-->
+
+<h5 class="mb-0"><b>Education</b></h5>
+{% if page.education %}
+<p class="ml-2">{{page.education}}</p>
+{% endif %}
+
+<h5 class="mb-0"><b>Achievement</b></h5>
+{% if page.certificate %}
+	{% assign eachCert = page.certificate | split: '.' %}
+	{% for certs in eachCert %}
+		<p class="mb-0 ml-2"> &#127942; {{certs}}</p>
+	{% endfor %}
+{% endif %}

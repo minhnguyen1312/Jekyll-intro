@@ -1,0 +1,18 @@
+<!--This includes an Objective-->
+
+<h5 class="mb-0"><b>Work Experience</b></h5>
+{% if page.experience %}
+	{% assign eachExp = page.experience | split: '.' %}
+	{% for exps in eachExp %}
+		<p class="mb-0 ml-2"> &#9745; {{exps}}</p>
+	{% endfor %}
+{% endif %}
+
+<h5 class="mb-0"><b>Objective</b></h5>
+{% if page.objective %}
+	{% assign eachObj = page.objective | split: '.' %}
+	{% for objs in eachObj %}
+		<p class="mb-0 ml-1"> &#9744; {{objs}}</p>
+	{% endfor %}
+	
+{% endif %}

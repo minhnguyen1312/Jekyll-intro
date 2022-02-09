@@ -1,0 +1,31 @@
+<!--This includes Born + Address, Phone number, Email, ++ Personal Hobbies-->
+
+<h6><b>Details</b></h6>
+{% if page.doB %}
+<p class="mb-0">Date of birth: {{page.doB}}</p>
+{% endif %}
+
+
+{% if page.hobbies %}
+<p class="mb-0">Hobby: {{page.hobbies}}</p>
+{% endif %}
+
+
+{% if page.address %}
+<p class="mb-0">{{page.address}}</p>
+{% endif %}
+
+
+{% if page.phNumber %}
+<p class="mb-0">{{page.phNumber}}</p>
+{% endif %}
+
+<p class="mb-0"><b>Email</b></p>
+{% if page.pEmail%}
+	<p class="mb-0" style="color: #85C1E9"> &#127968;{{page.pEmail}}</p>
+{% endif %}
+
+
+{% if page.vguID %}
+	<p class="mb-0" style="color: #85C1E9"> &#128188;{{page.vguID}}@vgu.edu.vn</p>
+{% endif %}

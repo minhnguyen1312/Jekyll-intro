@@ -1,0 +1,21 @@
+<!--This includes a Short description of self-->
+
+
+<h5 class="mb-0"><b>Profile</b></h5>
+{% if page.profile %}
+<p class="mb-0 ml-2">{{page.profile}}</p>
+{% endif %}
+
+
+{% if page.favorite_quote %}
+<div>
+	<hr class="mb-0">
+	<p  class="mb-0">"{{page.favorite_quote}}"</p>
+	{% if page.author %}
+		<h6 class="d-flex flex-row-reverse"> &#9135; {{page.author}} &#9135;</h6>
+	{% endif %}
+	<hr class="mt-0">
+</div>
+{% endif %}
+
+

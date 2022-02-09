@@ -1,0 +1,39 @@
+<!--This includes a self grading of 10 in relevant skill set + languages-->
+
+{% if page.skills %}
+<h6 class="mb-0"><b>Skills</b></h6>
+
+<div class="m-1">
+{% assign eachSkill = page.skills | split: ',' %}
+	{% for Skill in eachSkill %}
+		{% assign name = Skill | split: ' ' %}
+		{{ name | slice: 0 }}
+		{% assign number = name | slice: 1 %}
+		<div class="container">
+			<div class="progress" style="height: 6px">
+				<div class="progress-bar progress-bar-success" style="width:{{number}}0%;"></div>
+			</div>
+		</div>
+		<br>
+	{% endfor %}
+	
+{% endif %}
+</div>
+<div class="m-1">
+{% if page.languages %}
+<h6 class="mb-0"><b>Languages</b></h6>
+	{% assign eachLanguage = page.languages | split: ',' %}
+	{% for Language in eachLanguage %}
+		{% assign name = Language | split: ' ' %}
+		{{ name | slice: 0 }}
+		{% assign number = name | slice: 1 %}
+		<div class="container">
+			<div class="progress" style="height: 6px">
+				<div class="progress-bar progress-bar-success" style="width:{{number}}0%;"></div>
+			</div>
+		</div>
+		<br>
+	{% endfor %}
+
+{% endif %}
+</div>
